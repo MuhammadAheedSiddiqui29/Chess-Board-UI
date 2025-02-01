@@ -1,4 +1,5 @@
 let table = document.querySelector("#table");
+let left = document.querySelector("#left");
 
 // CHESS BOARD UI USING LOOPS, DOM
 
@@ -18,3 +19,12 @@ for(let i = 1 ; i <= 8 ; i++){
 // ROWS AND COLUMN UI
 const rows = [1, 2, 3, 4, 5, 6, 7, 8];
 const column = ["A", "B", "C", "D", "E", "F", "G", "H"];
+
+rows.forEach(element => {
+    let newDiv = document.createElement("div");
+    newDiv.textContent = element;
+    left.appendChild(newDiv);
+});
+
+
+
