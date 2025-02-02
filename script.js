@@ -1,6 +1,10 @@
 let table = document.querySelector("#table");
-let left = document.querySelector("#left");
+
+// CALLING THE DIVS THROUGH DOM
+let leftDiv = document.querySelector("#left");
+let rightDiv = document.querySelector("#right");
 let topDiv = document.querySelector("#top")
+let bottomDiv = document.querySelector("#bottom");
 
 // CHESS BOARD UI USING LOOPS, DOM
 
@@ -23,16 +27,26 @@ const column = ["A", "B", "C", "D", "E", "F", "G", "H"];
 
 // LEFT DIV ELEMENTS
 rows.forEach(leftElement => {
-    let leftDiv = document.createElement("div");
-    leftDiv.textContent = leftElement;
-    left.appendChild(leftDiv);
+    let leftDivChild = document.createElement("div");
+    leftDivChild.textContent = leftElement;
+    leftDiv.appendChild(leftDivChild);
+    leftDiv.style.display = "flex";
+    leftDiv.style.flexDirection = "column";
+    leftDiv.style.gap = "2.4rem";
+    leftDiv.style.color = "#fff";
+    leftDiv.style.fontSize = "1.5rem";
 });
 
 // RIGHT DIV ELEMENTS
 rows.forEach(rightElement => {
-    let rightDiv = document.createElement("div");
-    rightDiv.textContent = rightElement;
-    right.appendChild(rightDiv);
+    let rightDivChild = document.createElement("div");
+    rightDivChild.textContent = rightElement;
+    rightDiv.appendChild(rightDivChild);
+    rightDiv.style.display = "flex";
+    rightDiv.style.flexDirection = "column-reverse";
+    rightDiv.style.gap = "2.4rem";
+    rightDiv.style.color = "#fff"; 
+    rightDiv.style.fontSize = "1.5rem";
 })
 
 // TOP DIV ELEMENTS
@@ -40,6 +54,22 @@ column.forEach(topElement => {
     let topDivChild = document.createElement("div");
     topDivChild.textContent = topElement;
     topDiv.appendChild(topDivChild);
+    topDiv.style.display = "flex";
+    topDiv.style.gap = "3.1rem";
+    topDiv.style.color = "#fff";
+    topDiv.style.fontSize = "1.5rem";
+})
+
+// BOTTOM DIV ELEMENTS
+column.forEach(bottomElement => {
+    let bottomDivChild = document.createElement("div");
+    bottomDivChild.textContent = bottomElement;
+    bottomDiv.appendChild(bottomDivChild);
+    bottomDiv.style.display = "flex";
+    bottomDiv.style.gap = "3.1rem";
+    bottomDiv.style.flexDirection = "row-reverse";
+    bottomDiv.style.color = "#fff";
+    bottomDiv.style.fontSize = "1.5rem";
 })
 
 
