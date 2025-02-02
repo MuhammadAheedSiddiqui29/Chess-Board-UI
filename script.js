@@ -20,11 +20,15 @@ for(let i = 1 ; i <= 8 ; i++){
 const rows = [1, 2, 3, 4, 5, 6, 7, 8];
 const column = ["A", "B", "C", "D", "E", "F", "G", "H"];
 
-rows.forEach(element => {
-    let newDiv = document.createElement("div");
-    newDiv.textContent = element;
-    left.appendChild(newDiv);
+rows.forEach(leftElement => {
+    let leftDiv = document.createElement("div");
+    leftDiv.textContent = leftElement;
+    left.appendChild(leftDiv);
 });
 
 
-
+rows.forEach(rightElement => {
+    let rightDiv = document.createElement("div");
+    rightDiv.textContent = rightElement;
+    right.appendChild(rightDiv);
+})
