@@ -40,3 +40,32 @@ body {
         background-repeat: no-repeat;
     }
 }
+
+@media screen and (max-width: 350px) {
+    html{
+        font-size: 8px;
+       
+       }
+
+    body { 
+        background-image: radial-gradient(circle 341px at 10% 20%, rgba(132, 94, 194, 1) 0%, rgba(196, 243, 251, 1) 90%);
+        background-color: unset; 
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    html{
+        font-size: px;
+       
+       }
+
+    body { 
+        background-image: radial-gradient(circle 341px at 10% 20%, rgba(132, 94, 194, 1) 0%, rgba(196, 243, 251, 1) 90%);
+        background-color: unset; 
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
